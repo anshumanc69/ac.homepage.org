@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab ||</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="links">
+            <a href="https://www.google.com" target="_blank">Google</a>
+            <a href="https://www.microsoft.com/edge" target="_blank">Edge</a>
+            <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+            <a href="https://www.blackbox.ai" target="_blank">Blackbox.ai</a>
+            <a href="https://mail.google.com" target="_blank">Gmail</a>
+            <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="top-search" placeholder="Search here...">
+            <button onclick="googleSearch('top-search')">Search</button>
+            <!-- <button class="toggle-btn" onclick="toggleMode()">Mode</button> -->
+        </div>
+        <div class="dot-menu">
+            <button class="dot-menu-btn">:</button>
+            <div class="dot-menu-content">
+                <a href="https://accounts.google.com/signup" target="_blank">Create Google Account</a>
+                <a href="https://signup.live.com" target="_blank">Create Microsoft Account</a>
+                <!-- <a href="chrome://bookmarks/">Password Manager</a>
+                <a href="chrome://settings/passwords">Bookmark Manager</a> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Search Box -->
+    <div class="main-search-box">
+        <input type="text" id="main-search" placeholder="Search here...">
+        <button onclick="googleSearch('main-search')">Search</button>
+    </div>
+
+    <!-- Circle Links -->
+    <div class="circle-links">
+        <a href="https://www.instagram.com" target="_blank">Insta</a>
+        <a href="https://www.facebook.com" target="_blank">FB</a>
+        <a href="https://www.messenger.com" target="_blank">Msg</a>
+        <a href="https://www.office.com" target="_blank">MS 365</a>
+        <a href="https://github.com" target="_blank">github</a>
+    </div>
+
+    <script>
+        function googleSearch(inputId) {
+            const query = document.getElementById(inputId).value;
+            if (query) {
+                window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+            }
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+</html>
